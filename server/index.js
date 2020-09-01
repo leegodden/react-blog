@@ -27,6 +27,12 @@ app.use(cookieParser());
 
 /// ROUTES ///
 
+app.get('/', (req, res)=> {
+  res.json({'Application deployed at Heroku'})
+})
+
+
+
 /// protected route
 app.get('/api/user/auth', auth, (req, res) => {
   res.status(200).json({
